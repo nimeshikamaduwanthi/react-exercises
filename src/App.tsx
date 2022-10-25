@@ -1,12 +1,10 @@
-import { Movies } from "components/movies.componet";
-import React from "react";
+import Routers from "routes/routes";
 import "./App.css";
 
 const App = (): JSX.Element => {
   return (
     <div>
-      <Movies />
-      <h1>Hello</h1>
+      <Routers />
     </div>
   );
 };
