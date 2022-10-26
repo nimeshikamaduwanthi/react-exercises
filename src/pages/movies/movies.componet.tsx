@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { MovieContext } from "contexts/movies/movies.context";
 import { useContext, useEffect, useState } from "react";
-import { TMovieList } from "types/movie.types";
+import { TMovie } from "types/movie.types";
 import { Grid } from "@mui/material";
 import { MovieCard } from "components/movie/movie-card.componet";
 
 export const Movies = (): JSX.Element => {
-  const [movies, setMovies] = useState<TMovieList[]>();
+  const [movies, setMovies] = useState<TMovie[]>();
   const { getMovieList } = useContext(MovieContext);
 
   const getMovies = async (): Promise<void> => {

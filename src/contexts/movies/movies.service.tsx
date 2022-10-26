@@ -1,7 +1,7 @@
 import Axios from "axios";
-import { TMovie, TMovieList } from "../../types/movie.types";
+import { TMovie } from "../../types/movie.types";
 
-export const getMovieList = async (): Promise<TMovieList[]> => {
+export const getMovieList = async (): Promise<TMovie[]> => {
   try {
     const { data } = await Axios.get(
       "https://api.sampleapis.com/movies/animation"

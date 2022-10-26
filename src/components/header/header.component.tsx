@@ -1,5 +1,5 @@
 import { AppBar, Grid } from "@mui/material";
-import { MOVIE_ROUTES } from "enums/routes.enums";
+import { COMMON_ROUTES, MOVIE_ROUTES } from "enums/routes.enums";
 import { Link } from "react-router-dom";
 
 export const Header = (): JSX.Element => {
@@ -25,10 +25,10 @@ export const Header = (): JSX.Element => {
             <span style={styles.movieLog}>Movie</span> Info
           </Link>
 
-          <Link to={MOVIE_ROUTES.MOVIES_HOME} style={styles.container}>
+          <Link to={COMMON_ROUTES.ABOUT_PAGE} style={styles.container}>
             About
           </Link>
-          <Link to={MOVIE_ROUTES.MOVIES_HOME} style={styles.container}>
+          <Link to={COMMON_ROUTES.TERM_PAGE} style={styles.container}>
             Terms of Service
           </Link>
         </Grid>

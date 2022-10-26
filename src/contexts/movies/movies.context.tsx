@@ -1,5 +1,5 @@
 import { createContext, ReactNode } from "react";
-import { TMovie, TMovieList } from "types/movie.types";
+import { TMovie } from "types/movie.types";
 import { getMovieDetail, getMovieList } from "./movies.service";
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
 };
 
 type TMovieContext = {
-  getMovieList: () => Promise<TMovieList[]>;
+  getMovieList: () => Promise<TMovie[]>;
   getMovieDetail: (id: string) => Promise<TMovie | null>;
 };
 

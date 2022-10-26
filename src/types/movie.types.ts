@@ -3,7 +3,3 @@ export type TMovie = {
   posterURL: string;
   imdbId: string;
 };
-
-export type TMovieList = {
-  posts: TMovie[];
-};

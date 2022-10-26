@@ -11,11 +11,13 @@ import { Link } from "react-router-dom";
 
 export const MovieCard = ({ movie }: any): JSX.Element => {
   return (
-    <Grid display="flex">
+    <Grid>
       <Card
         sx={{
           background: "#1b1b1b",
           color: "#fff",
+          height: 400,
+          maxHeight: 400,
         }}
       >
         <CardMedia
@@ -36,10 +38,14 @@ export const MovieCard = ({ movie }: any): JSX.Element => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Share</Button>
+          <Button style={styles.linkMore} size="small">
+            Share
+          </Button>
           <Button size="small">
             {" "}
-            <Link to={`movie/${movie.id}`}>Learn More </Link>
+            <Link style={styles.linkMore} to={`movie/${movie.id}`}>
+              Learn More{" "}
+            </Link>
           </Button>
         </CardActions>
       </Card>
@@ -50,6 +56,10 @@ export const MovieCard = ({ movie }: any): JSX.Element => {
 const styles = {
   link: {
     color: "#fff",
+    textDecoration: "none",
+  },
+  linkMore: {
+    color: "#0e76bc",
     textDecoration: "none",
   },
 };
